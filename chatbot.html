@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema con Código y Glosario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00dbde 0%, #fc00ff 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content-wrapper {
+            background: #200330;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .tema-titulo {
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .tema-titulo h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .tema-titulo p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            color: #167069;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .code-container {
+            background: #87ceeb;
+            border-radius: 10px;
+            padding: 20px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .code-container pre {
+            margin: 0;
+            color: #e2e8f0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .code-container code {
+            display: block;
+        }
+
+        .keyword { color: #ff79c6; }
+        .function { color: #50fa7b; }
+        .string { color: #f1fa8c; }
+        .comment { color: #6272a4; }
+        .number { color: #bd93f9; }
+
+        .glosario-item {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glosario-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .glosario-item h4 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .glosario-item p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .parametros {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .parametros strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .parametros code {
+            background: #2d3748;
+            color: #50fa7b;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .tema-titulo h2 {
+                font-size: 1.5em;
+            }
+
+            .section h3 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Realizado por: Estrada Vazquez Kevin Alexis</h1>
+            <p>Especialidad de IA del CBTIS 144</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="tema-titulo">
+                <h2>Tema 1: Funciones en Python</h2>
+                <p>Creación y uso de funciones personalizadas</p>
+            </div>
+
+            <div class="section">
+                <h3>📝 Código del Ejemplo</h3>
+                <div class="code-container">
+                    <pre>
+#Ejemplo chatbot con listas basico
+#Importar la libreria random
+import random
+
+#lista de saludos y respuestas
+saludos=["hola","que tal","buenos dias","buenas tardes","buen dia"]
+respuesta_saludos=["hola, como estas?",
+                   "como puedo ayudarte",
+                   "hola como te va",
+                   "que hay?"]
+
+
+despedida=["adios","bye","gracias","nos vemos","hasta luego","salir"]
+respuesta_despedida=[
+    "adios, hasta pronto",
+    "fue un placer ayudarte",
+    "cuidate",
+    "nos vemos luego",
+    "bye"
+]
+
+pregunta=["puedes ayudarme con mi tarea?"]
+
+respuesta_pregunta=["hola, si puedo hacerlo",
+                    "claro, hagamoslo",
+                    "con mucho gusto",
+                    "ok, realizemoslo paso a paso",
+                    "perfecto, te ayudare con tus actividades"]
+nombre=["como te llamas?","cual es tu nombre?","como te puedo llamar"]
+
+respuesta_pregunta_nombre=["yo me llamo chato",
+                           "mi nombre es chato",
+                           "me llamo chato",
+                           "yo soy chato,¿y tu?",
+                           "puedes llamarme chato, aunque no tengo "
+                           "apellido todavia",
+                           "yo soy chato o tambien puedes decirme CHA-10"]
+
+presentacion=["puedes presentarte?"]
+respuesta_presentacion=["hola, si puedo hacerlo, yo soy chato tu chatbot de confianza",
+                        "claro, mi nombre es chato y soy un chatbot que esta para ayudarte ",
+                        "seguro, mi nombre es chato y soy tu chabot personal para lo que necesites"
+                        "¿que tienes planeado para hoy",
+                        "de acuredo, mi nombre es chato o tambien CHA-10,¿y tu?"]
+
+#Mensaje de bienvenida del chatbot
+print("Hola soy Chato, tu chatbot de confianza, si deseas"
+      "terminar presiona salir")
+
+while True:
+    usuario=input("Tu:").lower().strip()
+
+    if usuario in saludos:
+        print("chatbot:",random.choice(respuesta_saludos))
+    elif usuario in despedida:
+        print("chatbot:",random.choice(respuesta_despedida))
+        break
+    elif usuario in pregunta:
+        print("chatbot:",random.choice(respuesta_pregunta))
+    elif usuario in nombre:
+        print("chatbot:",random.choice(respuesta_pregunta_nombre))
+    elif usuario in presentacion:
+        print("chatbot:", random.choice(respuesta_presentacion))</pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>📚 Glosario de Funciones</h3>
+
+                <div class="glosario-item">
+                    <h4>.strip</h4>
+                    <p>Se utiliza para eliminar espacios en blanco o caracteres específicos del principio y del final de una cadena de texto. </p>
+                    <h4>random.choice</h4>
+                    <p>Elige un único elemento aleatorio de una secuencia</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
