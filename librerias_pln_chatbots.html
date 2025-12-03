@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librerías de PLN para Chatbots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content-wrapper {
+            background: #7C8282;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .tema-titulo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .tema-titulo h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .tema-titulo p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #7C8282;
+        }
+
+        .categoria-container {
+            margin-bottom: 40px;
+        }
+
+        .categoria-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .categoria-header:hover {
+            transform: translateX(5px);
+        }
+
+        .categoria-header h4 {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+
+        .categoria-descripcion {
+            font-size: 1em;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .glosario-item {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glosario-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .glosario-item h4 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .glosario-item p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .parametros {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .parametros strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .parametros code {
+            background: #2d3748;
+            color: #50fa7b;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .tema-titulo h2 {
+                font-size: 1.5em;
+            }
+
+            .section h3 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Realizado por: Estrada Vazquez Kevin Alexis</h1>
+            <p>Especialidad de IA del CBTIS 144</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="tema-titulo">
+                <h2>Librerías de Python para Chatbots</h2>
+                <p>Herramientas y frameworks en Python para el desarrollo de chatbots inteligentes</p>
+            </div>
+
+            <div class="section">
+                <h3>📚 Glosario de Librerías de Python</h3>
+
+                <!-- CHATBOTS CON PLN -->
+                <div class="categoria-container">
+                    <div class="categoria-header">
+                        <h4>🤖 Librerías de Python para Chatbots con PLN</h4>
+                        <p class="categoria-descripcion">
+                            Librerías de Python especializadas en Procesamiento de Lenguaje Natural que permiten analizar, tokenizar, extraer entidades y comprender la intención del usuario en conversaciones de chatbots.
+                        </p>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>NLTK</h4>
+                        <p>Librería de Python para PLN que ofrece herramientas completas de tokenización, stemming, lematización y análisis de texto. Perfecta para implementar chatbots educativos con procesamiento básico de lenguaje.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install nltk</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>spaCy</h4>
+                        <p>Librería de Python de alto rendimiento para PLN industrial. Proporciona modelos preentrenados en español para reconocimiento de entidades nombradas (NER) y análisis sintáctico, ideal para chatbots empresariales.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install spacy</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>TextBlob</h4>
+                        <p>Librería de Python simple e intuitiva para procesamiento de texto. Permite analizar sentimientos de usuarios, corregir ortografía y traducir mensajes en chatbots con pocas líneas de código Python.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install textblob</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>pattern</h4>
+                        <p>Librería de Python para minería web y PLN. Incluye análisis de sentimientos, conjugación de verbos y extracción de información, útil para crear chatbots que comprenden español de manera natural.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install pattern</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>polyglot</h4>
+                        <p>Librería de Python multilingüe para PLN. Soporta más de 130 idiomas incluyendo español, con capacidades de tokenización, detección de idioma y análisis de sentimientos para chatbots internacionales.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install polyglot</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHATBOTS CON IA -->
+                <div class="categoria-container">
+                    <div class="categoria-header">
+                        <h4>🧠 Librerías de Python para Chatbots con IA</h4>
+                        <p class="categoria-descripcion">
+                            Librerías de Python basadas en inteligencia artificial y machine learning que permiten crear chatbots conversacionales con redes neuronales, transformers y modelos de lenguaje avanzados en Python.
+                        </p>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>transformers (Hugging Face)</h4>
+                        <p>Librería de Python líder para modelos transformer. Permite usar modelos como GPT, BERT y BETO (BERT en español) directamente en Python para crear chatbots con comprensión contextual avanzada.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install transformers</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>ChatterBot</h4>
+                        <p>Librería de Python específicamente diseñada para crear chatbots conversacionales. Incluye adaptadores de lógica, corpus de entrenamiento en español y capacidad de aprender de las conversaciones con machine learning en Python.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install chatterbot</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>TensorFlow</h4>
+                        <p>Librería de Python para deep learning de Google. Permite construir y entrenar redes neuronales seq2seq y arquitecturas LSTM personalizadas para chatbots inteligentes programados completamente en Python.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install tensorflow</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>PyTorch</h4>
+                        <p>Librería de Python para machine learning con grafos computacionales dinámicos. Ideal para investigar y desarrollar arquitecturas de chatbots generativos y modelos de atención en Python de forma flexible.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install torch</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>LangChain</h4>
+                        <p>Librería moderna de Python para construir aplicaciones con LLMs. Facilita crear chatbots en Python con memoria, cadenas de razonamiento y capacidad de usar herramientas externas con modelos de lenguaje.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install langchain</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHATBOTS CONECTADOS A PLATAFORMAS -->
+                <div class="categoria-container">
+                    <div class="categoria-header">
+                        <h4>💬 Librerías de Python para Chatbots en Plataformas</h4>
+                        <p class="categoria-descripcion">
+                            Librerías de Python que permiten integrar chatbots con plataformas de mensajería como WhatsApp, Telegram, Messenger y Slack, facilitando la conexión mediante APIs en Python.
+                        </p>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>python-telegram-bot</h4>
+                        <p>Librería de Python wrapper de la API de Telegram. Permite crear bots para Telegram en Python con comandos personalizados, botones inline, procesamiento de mensajes y multimedia de forma sencilla.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install python-telegram-bot</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>twilio</h4>
+                        <p>Librería oficial de Python para la API de Twilio. Conecta chatbots Python con WhatsApp Business, SMS y llamadas de voz mediante código Python simple y bien documentado.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install twilio</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>fbchat</h4>
+                        <p>Librería de Python no oficial para Facebook Messenger. Permite crear chatbots en Python que envíen y reciban mensajes de Messenger, gestionen conversaciones y automaticen respuestas.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install fbchat</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>slack-sdk</h4>
+                        <p>SDK oficial de Python para Slack. Facilita la creación de bots de Slack programados en Python con slash commands, listeners de eventos, modales interactivos y workflows automatizados.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install slack-sdk</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>discord.py</h4>
+                        <p>Librería de Python para la API de Discord. Permite crear bots de Discord completamente en Python con comandos, eventos, gestión de canales de voz y embeds personalizados para comunidades.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install discord.py</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHATBOTS EN PÁGINAS WEB -->
+                <div class="categoria-container">
+                    <div class="categoria-header">
+                        <h4>🌐 Librerías de Python para Chatbots Web</h4>
+                        <p class="categoria-descripcion">
+                            Librerías de Python para integrar chatbots directamente en páginas web mediante frameworks web Python, interfaces interactivas y comunicación en tiempo real programadas completamente en Python.
+                        </p>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>Flask</h4>
+                        <p>Microframework web de Python minimalista. Ideal para crear APIs REST de chatbots en Python que se integren en páginas web mediante AJAX o WebSockets con código Python ligero y flexible.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install flask</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>Django</h4>
+                        <p>Framework web completo de Python. Permite construir aplicaciones web robustas con chatbots integrados, gestión de usuarios, base de datos y panel de administración todo programado en Python.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install django</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>Streamlit</h4>
+                        <p>Librería de Python para crear aplicaciones web de datos y ML. Permite desarrollar interfaces de chatbot web completas usando solo Python sin necesidad de HTML, CSS o JavaScript.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install streamlit</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>Gradio</h4>
+                        <p>Librería de Python para crear interfaces web de modelos ML. Despliega chatbots en páginas web con interfaces modernas y compartibles usando únicamente código Python en minutos.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install gradio</code>
+                        </div>
+                    </div>
+
+                    <div class="glosario-item">
+                        <h4>Flask-SocketIO</h4>
+                        <p>Extensión de Python para Flask que añade WebSockets. Permite crear chatbots web en Python con comunicación bidireccional en tiempo real entre el servidor Python y el navegador del usuario.</p>
+                        <div class="parametros">
+                            <strong>Instalación Python:</strong>
+                            <code>pip install flask-socketio</code>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
